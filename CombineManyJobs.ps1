@@ -38,7 +38,7 @@ $files | ForEach-Object {
         $body = $([PSCustomObject]@{
             user_name = $user
         } | convertto-json)
-        $res = Invoke-RestMethod -Method GET -Uri "$db_uri`uusersByName/" -Body $body
+        $res = Invoke-RestMethod -Method GET -Uri "$db_uri/usersByName/" -Body $body
         $userID = $res.user_id
     }
 }
